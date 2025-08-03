@@ -9,18 +9,21 @@ function Home() {
   const [flashcards, setFlashcards] = useState([]);
   const [decks, setDecks] = useState([]);
 
+  // Initialize AOS
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+  // Load flashcards and decks from localStorage
   useEffect(() => {
     const storedCards = JSON.parse(localStorage.getItem('flashcards')) || [];
     const storedDecks = JSON.parse(localStorage.getItem('decks')) || [];
     setFlashcards(storedCards);
     setDecks(storedDecks);
-    AOS.refresh(); // Refresh AOS when data updates
+    AOS.refresh();
   }, []);
 
+  // Delete flashcard
   const deleteCard = (id) => {
     if (window.confirm('🗑️ Are you sure you want to delete this flashcard?')) {
       const updated = flashcards.filter(card => card.id !== id);
@@ -29,6 +32,7 @@ function Home() {
     }
   };
 
+  // Edit flashcard
   const editCard = (id) => {
     const card = flashcards.find(c => c.id === id);
     if (!card) return;
@@ -49,11 +53,15 @@ function Home() {
     <div className="home-wrapper">
       {/* Hero Section */}
       <section className="hero-section" data-aos="zoom-in">
-        <h1>📚 Welcome to Flashcards App</h1>
+        <h1>📚 Welcome to FlipNStudy</h1>
         <p>Learn smarter, not harder — using spaced repetition flashcards.</p>
         <div className="hero-buttons">
-          <a href="/create" className="btn-primary" data-aos="fade-up" data-aos-delay="100">➕ Create Flashcards</a>
-          <a href="/practice" className="btn-secondary" data-aos="fade-up" data-aos-delay="200">🚀 Start Practicing</a>
+          <a href="/create" className="btn-primary" data-aos="fade-up" data-aos-delay="100">
+            ➕ Create Flashcards
+          </a>
+          <a href="/practice" className="btn-secondary" data-aos="fade-up" data-aos-delay="200">
+            🚀 Start Practicing
+          </a>
         </div>
       </section>
 
@@ -77,7 +85,6 @@ function Home() {
       {/* Flashcards Section */}
       <section className="flashcards-section" data-aos="fade-up">
         <h2>📄 Your Flashcards</h2>
-
         {flashcards.length > 0 ? (
           <div className="flashcard-grid">
             {flashcards.map((card, index) => (
