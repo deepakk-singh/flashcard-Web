@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# 📚 FlipnStudy - Flashcards Web 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a6de29d-f0a6-48c5-9b7a-4cfef07cc0c7/deploy-status)](https://flipnstudy.netlify.app)
 
-## Available Scripts
+**FlipnStudy** is a modern, animated, and responsive flashcards web app to help you master any topic using spaced repetition! Designed for both ease-of-use and effectiveness, it's built with React, AOS, and localStorage (with optional Firebase/MongoDB integration).
 
-In the project directory, you can run:
+🔗 **Live Site**: [https://flipnstudy.netlify.app](https://flipnstudy.netlify.app)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🧠 Spaced repetition-based learning
+- ➕ Create flashcards with term & definition
+- 🧾 Deck organization (by topic)
+- 🔁 Practice mode with progress retention
+- 📊 Quick stats dashboard (total cards & decks)
+- 🎨 Animated UI with AOS
+- 💡 Mobile-responsive design
+- 🔐 Login/Signup system (optional)
+- 🌙 Optional dark mode
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tech Stack
 
-### `npm run build`
+| Tech          | Description                     |
+|---------------|---------------------------------|
+| **React.js**  | Frontend framework              |
+| **AOS**       | Animate on Scroll library       |
+| **React Router** | Page navigation              |
+| **CSS3**      | Styling and responsive layout   |
+| **FontAwesome** | Icons                        |
+| **Netlify**   | Hosting and deployment platform |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧪 Installation & Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/your-username/flipnstudy.git
+   cd flipnstudy
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start the development server:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
 
-## Learn More
+4. **Build for production:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### ✅ TODO (Upcoming)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+      🔄 Cloud sync using Firebase/MongoDB
+   
+      🌓 Dark mode toggle
+   
+      🧪 Deck-wise stats tracking
+   
+      🎓 Multi-user support
+   
+      🧠 Spaced repetition algorithm enhancement
 
-### Analyzing the Bundle Size
+### 👨‍💻 Author
+  Developed with 💙 by Deepak Kumar
+  🌐 GitHub: https://github.com/deepakk-singh
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🌍 Live Demo
+  👉 Visit the live site here: https://flipnstudy.netlify.app
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
