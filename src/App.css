@@ -1,0 +1,178 @@
+/* Reset and base styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+  /* Dark, immersive background */
+  background-color: #1E1E2F;
+
+  /* Light text for readability */
+  color: #B0B0B0;
+
+  /* Optional: smoother text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3 {
+  color: #7F00FF; /* Electric purple for titles */
+}
+
+a, .btn-primary {
+  color: #ffffff;
+  background-color: #00BFFF; /* Neon Blue */
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover, .btn-primary:hover {
+  background-color: #E63946; /* Crimson Red on hover */
+}
+
+.glow-text {
+  text-shadow: 0 0 8px #00FFFF, 0 0 16px #7F00FF;
+}
+
+
+/* Wrapper flexbox layout */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.app-header {
+  background-color: #282c34;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* Hamburger menu button */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animate hamburger bars when active */
+.hamburger.is-active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation */
+.app-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.nav-link:hover {
+  color: #61dafb;
+}
+
+.nav-link.active {
+  color: #61dafb;
+  border-bottom-color: #61dafb;
+}
+
+/* Responsive nav - mobile menu */
+@media (max-width: 768px) {
+  .app-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #282c34;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+  }
+
+  .app-nav.open {
+    max-height: 300px; /* enough for all links */
+  }
+
+  .nav-link {
+    padding: 15px 20px;
+    border-bottom: 1px solid #3a3f47;
+  }
+}
+
+/* Main content grows to fill space */
+.app-main {
+  flex: 1 0 auto;
+  padding: 20px 15px;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer styles */
+.app-footer {
+  flex-shrink: 0;
+  background-color: #20232a;
+  color: #888;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #61dafb;
+  color: #000;
+  padding: 8px 15px;
+  z-index: 1000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}

@@ -1,0 +1,134 @@
+.practice-empty {
+  text-align: center;
+  padding: 2rem;
+  max-width: 500px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.practice-select-deck {
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.practice-deck-select {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+.practice-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.practice-progress {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.practice-card {
+  width: 300px;
+  height: 200px;
+  margin: 2rem auto;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  outline: none;
+}
+
+.practice-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.practice-card-front,
+.practice-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  padding: 1rem;
+  backface-visibility: hidden;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.practice-card-front {
+  background-color: #4f46e5;
+}
+
+.practice-card-back {
+  background-color: #22c55e;
+  transform: rotateY(180deg);
+  pointer-events: auto;
+}
+
+.practice-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.practice-button {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.practice-button:focus {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 2px;
+}
+
+.practice-button.correct {
+  background-color: #22c55e;
+  color: white;
+}
+
+.practice-button.correct:hover {
+  background-color: #16a34a;
+}
+
+.practice-button.incorrect {
+  background-color: #ef4444;
+  color: white;
+}
+
+.practice-button.incorrect:hover {
+  background-color: #b91c1c;
+}
+
+.practice-button.change-deck {
+  margin-top: 2rem;
+  background-color: #6366f1;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.practice-button.change-deck:hover {
+  background-color: #4f46e5;
+}
