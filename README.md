@@ -4,7 +4,7 @@
 
 **FlipnStudy** is a modern, animated, and responsive flashcards web app to help you master any topic using spaced repetition! Designed for both ease-of-use and effectiveness, it's built with React, AOS, and localStorage (with optional Firebase/MongoDB integration).
 
-🔗 **Live Site**: [https://flipnstudy.netlify.app](https://flipnstudy.netlify.app)
+🔗 **Live Site**: [https://flipnstudy.netlify.app](https://flips-n-study.netlify.app)
 
 ---
 
@@ -76,6 +76,6 @@
   🌐 GitHub: https://github.com/deepakk-singh
 
 ### 🌍 Live Demo
-  👉 Visit the live site here: https://flipnstudy.netlify.app
+  👉 Visit the live site here: [https://flipnstudy.netlify.app](https://flips-n-study.netlify.app)
 
 
